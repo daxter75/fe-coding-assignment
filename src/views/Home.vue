@@ -6,7 +6,9 @@
           <img v-if="listing.image" :src="listing.image" alt="listing.title" />
         </div>
         <p>
-          {{ listing.title }}
+          <RouterLink :to="{ name: 'listing-detail-page', params: { itemId: listing.id } }">
+            {{ listing.title }}
+          </RouterLink>
         </p>
       </li>
     </ul>
